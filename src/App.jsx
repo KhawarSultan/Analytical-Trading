@@ -7,9 +7,7 @@ import { FetchDBData } from './Helpers/API_Calls'
 import Footer from './External/FooterPage'
 function App() {
   const { user, db_user, setDBUser, refresh, setUserCreated, userCreated } = useContext(UserContext);
-
   const navigate = useNavigate();
-
   const location = useLocation();
   useEffect(() => {
       window.scrollTo(0, 0);

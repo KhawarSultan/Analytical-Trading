@@ -25,7 +25,7 @@ const HomePage = () => {
                     <p className=" font-extrabold dark:text-orange-500 md:text-6xl text-3xl mb-3 ">About Learn Crypto</p>
                     <p className=" text-gray-600  text-lg  w-4/5 mb-2 ">Learn Crypto is a free education platform designed to help users easily learn about cryptocurrency, with simple, relevant and engaging content.</p>
                     <p className=" text-gray-600  text-lg  w-4/5 mb-4 ">Start with cryptocurrency basics or choose from our common themes.</p>
-                    <button onClick={() => navigate(`/knowledge-base`)} className="px-7 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-full font-bold transition-all ease-in  flex items-center gap-2">Start Learning <IoIosArrowForward size={20} /></button>
+                    <button onClick={() => navigate(`/knowledge-base`)} className="px-5 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-md font-bold transition-all ease-in  flex items-center gap-2">Start Learning <IoIosArrowForward size={20} /></button>
 
                 </div>
                 <div className="w-full">

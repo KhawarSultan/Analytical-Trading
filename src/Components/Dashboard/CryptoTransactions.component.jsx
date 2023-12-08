@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import CurrencyText from "../CurrencyText/CurrencyText.component";
 
 const CryptoTransactionsDashboard = ({ transactions }) => {
 
-    if (!transactions.length)
+    if (!transactions?.length)
         return <span>No transactions yet!</span>
 
     return (

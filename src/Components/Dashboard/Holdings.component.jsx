@@ -11,7 +11,7 @@ const CryptoHoldings = ({ holdings, listOfCoins }) => {
         }
     }, [listOfCoins])
 
-    if (!holdings.length)
+    if (!holdings?.length)
         return <span>Get Started with Crypto today by clicking here!</span>
 
     return (

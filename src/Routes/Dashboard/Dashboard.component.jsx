@@ -47,7 +47,7 @@ const DashboardRoute = () => {
     }, [])
 
     useEffect(() => {
-        if (cryptoHoldings.length > 0) {
+        if (cryptoHoldings?.length > 0) {
             const symbol_list = cryptoHoldings.map((holding) => {
                 return holding.token_symbol
             })
@@ -66,12 +66,12 @@ const DashboardRoute = () => {
     }, [cryptoHoldings])
 
     useEffect(() => {
-        if (!listOfCoins.length === 0)
+        if (!listOfCoins?.length === 0)
             return;
 
         let port = 0;
 
-        cryptoHoldings.map((holding) => {
+        cryptoHoldings?.map((holding) => {
             port += holding.amount * listOfCoins[holding.token_symbol]?.price
         })
 
@@ -119,7 +119,7 @@ const DashboardRoute = () => {
                         <div className="flex flex-col gap-4 p-5 card">
                             <span className="text-lg flex w-full justify-between items-center">Current Holdings<span className="text-sm cursor-pointer">View all</span></span>
                             <div className="flex">
-                                <CryptoHoldings holdings={cryptoHoldings.slice(0, 6)} listOfCoins={listOfCoins} />
+                                <CryptoHoldings holdings={cryptoHoldings?.slice(0, 6)} listOfCoins={listOfCoins} />
                             </div>
                         </div>
 
@@ -127,7 +127,7 @@ const DashboardRoute = () => {
                             <div className="flex flex-col gap-4 p-4 px-6 card w-full">
                                 <span className="text-lg flex w-full justify-between items-center"><span>Fiat Transaction History</span><span className="text-sm cursor-pointer">View all</span></span>
                                 <div className="flex">
-                                    <FiatTransactionsDashboard transactions={fiatTransactions.slice(0, 8)} />
+                                    <FiatTransactionsDashboard transactions={fiatTransactions?.slice(0, 8)} />
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@ const DashboardRoute = () => {
                     <div className="flex flex-col gap-4 p-5 px-6 card flex-1">
                         <span className="text-lg flex w-full justify-between items-center"><span>Crypto Transaction History</span><span className="text-sm cursor-pointer">View all</span></span>
                         <div className="flex">
-                            <CryptoTransactionsDashboard transactions={cryptoTransactions.slice(0, 12)} />
+                            <CryptoTransactionsDashboard transactions={cryptoTransactions?.slice(0, 12)} />
                         </div>
                     </div>
                 </div>
